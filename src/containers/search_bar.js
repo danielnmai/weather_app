@@ -11,8 +11,10 @@ export default class SearchBar extends Component {
   onInputChange(event) {
     this.setState({ term: event.target.value });
   }
+
+  //Change something 
   onFormSubmit(event){
-    event.preventDefault();
+    // event.preventDefault();
   }
 
   render() {
