@@ -12,7 +12,7 @@ export default class SearchBar extends Component {
     this.setState({ term: event.target.value });
   }
 
-  //Change something 
+  //Change something
   onFormSubmit(event){
     // event.preventDefault();
   }

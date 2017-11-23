@@ -5,7 +5,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        //change things here
+        {/* change things here */}
         <SearchBar />
       </div>
 
