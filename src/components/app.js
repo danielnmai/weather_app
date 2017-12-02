@@ -6,6 +6,7 @@ export default class App extends Component {
     return (
       <div>
         {/* change things here */}
+        {/* add comment line */}
         <SearchBar />
       </div>
 
