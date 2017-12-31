@@ -11,15 +11,17 @@ class SearchBar extends Component {
       term: ''
     };
     this.onInputChange = this.onInputChange.bind(this);
+    this.onFormSubmit = this.onFormSubmit.bind(this);
   }
 
   onInputChange(event) {
     this.setState({term: event.target.value});
   }
 
-  //Change something
   onFormSubmit(event) {
     event.preventDefault();
+    this.props.fetchWeather(this.state.term);
+    this.setState({ term: ''});
   }
 
   render() {
