@@ -1,28 +1,28 @@
-import React, {Component} from 'react';
-import { connect } from 'react-redux';
-import Chart from '../components/chart';
-import GoogleMap from '../components/google_map';
-// import './table.css';
+import React, {Component} from 'react'
+import { connect } from 'react-redux'
+import Chart from '../components/chart'
+import GoogleMap from '../components/google_map'
+// import './table.css'
 
 class WeatherList extends Component {
 
   onPost() {
-    // return (9/5 * (data - 273 ) + 32);
-    return "haha";
+    // return (9/5 * (data - 273 ) + 32)
+    return "haha"
   }
 
   renderWeather(cityData){
     function KelvinToFahrenheit(data) {
-      return (9/5 * (data - 273 ) + 32);
+      return (9/5 * (data - 273 ) + 32)
     }
 
-    const name = cityData.city.name;
-    const temps = cityData.list.map(weather => KelvinToFahrenheit(weather.main.temp));
+    const name = cityData.city.name
+    const temps = cityData.list.map(weather => KelvinToFahrenheit(weather.main.temp))
 
-    // const temps = cityData.list.map(weather => weather.main.temp);
-    const pressures = cityData.list.map(weather => weather.main.pressure);
-    const humidities = cityData.list.map(weather => weather.main.humidity);
-    const {lon, lat} = cityData.city.coord;
+    // const temps = cityData.list.map(weather => weather.main.temp)
+    const pressures = cityData.list.map(weather => weather.main.pressure)
+    const humidities = cityData.list.map(weather => weather.main.humidity)
+    const {lon, lat} = cityData.city.coord
 
     return (
       <tr key={name}>
@@ -54,7 +54,7 @@ class WeatherList extends Component {
 }
 
 function mapStateToProps({ weather }) {
-  return { weather }; // { weather } === { weather: weather}
+  return { weather } // { weather } === { weather: weather}
 }
 
-export default connect (mapStateToProps)(WeatherList);
+export default connect (mapStateToProps)(WeatherList)
