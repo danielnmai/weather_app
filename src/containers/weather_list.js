@@ -7,8 +7,7 @@ import GoogleMap from '../components/google_map'
 class WeatherList extends Component {
 
   onPost() {
-    // return (9/5 * (data - 273 ) + 32)
-    return "haha"
+    return (9/5 * (data - 273 ) + 32)
   }
 
   renderWeather(cityData){
