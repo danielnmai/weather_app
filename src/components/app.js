@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SearchBar from '../containers/search_bar';
 import WeatherList from '../containers/weather_list';
 
-export default class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div>
@@ -15,3 +15,5 @@ export default class App extends Component {
     );
   }
 }
+
+export default App

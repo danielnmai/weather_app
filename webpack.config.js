@@ -8,19 +8,23 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [{
+    rules: [{
       exclude: /node_modules/,
-      loader: 'babel',
-      query: {
-        presets: ['react', 'es2015', 'stage-1']
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/react', '@babel/preset-env']
+        }
       }
     }]
   },
+  devtool: 'inline-source-map',
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['.js', '.jsx']
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './'
+    contentBase: './',
+    port: 3000
   }
 };

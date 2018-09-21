@@ -7,8 +7,6 @@ function average(data) {
 
 }
 
-
-
 export default (props) => {
   return (
     <div>

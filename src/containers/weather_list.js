@@ -4,7 +4,7 @@ import Chart from '../components/chart'
 import GoogleMap from '../components/google_map'
 // import './table.css'
 
-class WeatherList extends Component {
+class WeatherList extends React.Component {
 
   onPost() {
     return (9/5 * (data - 273 ) + 32)
